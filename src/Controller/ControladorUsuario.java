@@ -1,37 +1,37 @@
-package controller;
+package Controller;
 
 import java.util.List;
 
-import model.User;
-import servicePlatform.IUserController;
+import Model.Usuario;
+import ServicoPlataforma.IControladorUsuario;
 
-public class UserController implements IUserController{
+public class ControladorUsuario implements IControladorUsuario{
 
 	@Override
-	public List<User> get() {
+	public List<Usuario> get() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public User post(String json) {
+	public Usuario post(String json) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public User put(long id, String json) {
+	public Usuario put(long id, String json) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public User delete(long id) {
+	public Usuario delete(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
-	public User verifyData(String json) {
+	public Usuario verificarDados(String json) {
 		// TODO Auto-generated method stub
 		return null;
 	}

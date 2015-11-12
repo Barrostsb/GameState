@@ -1,6 +1,6 @@
-package dao;
+package DAO;
 
-public interface GenericDao<T> {
+public interface GenericDAO<T> {
 	T create () ;
 	T read(T entity);
 	T update(T entity) ;

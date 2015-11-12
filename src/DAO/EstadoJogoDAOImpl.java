@@ -1,29 +1,29 @@
-package dao;
+package DAO;
 
-import model.User;
- 
-public class UserDAOImpl implements GenericDao<User> {
+import Model.EstadoJogo;
+
+public class EstadoJogoDAOImpl implements GenericDAO<EstadoJogo>{
 
 	@Override
-	public User create() {
+	public EstadoJogo create() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public User read(User entity) {
+	public EstadoJogo read(EstadoJogo entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public User update(User entity) {
+	public EstadoJogo update(EstadoJogo entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public User delete(User entity) {
+	public EstadoJogo delete(EstadoJogo entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}

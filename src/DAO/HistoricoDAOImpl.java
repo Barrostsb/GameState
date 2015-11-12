@@ -1,43 +1,43 @@
-package dao;
+package DAO;
 
 import java.util.List;
 
-import model.History;
+import Model.Historico;
 
-public class HistoryDAOImpl implements HistoryDAO {
+public class HistoricoDAOImpl implements HistoricoDAO {
 
 	@Override
-	public History create() {
+	public Historico create() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public History read(History entity) {
+	public Historico read(Historico entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public History update(History entity) {
+	public Historico update(Historico entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public History delete(History entity) {
+	public Historico delete(Historico entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<History> listAll() {
+	public List<Historico> listAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<History> listAllByUser() {
+	public List<Historico> listAllByUser() {
 		// TODO Auto-generated method stub
 		return null;
 	}

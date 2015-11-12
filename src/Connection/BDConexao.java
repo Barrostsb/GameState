@@ -1,12 +1,12 @@
-package BDConexao;
+package Connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class BDConnection {
+public class BDConexao {
 	//atributte private and static for Singleton pattern
-	private static BDConnection uniqueInstance;
+	private static BDConexao uniqueInstance;
 	
 	private final String ADAPTER = "mysql";
 	private final String HOST = "";
@@ -17,16 +17,16 @@ public class BDConnection {
 	protected Connection connection;
 	
 	//private contructor for Singleton pattern
-	private BDConnection() throws SQLException {
+	private BDConexao() throws SQLException {
 		this.connection = null;
 		open();
 	}
 	
 	//public method for Singleton pattern
-	public static synchronized BDConnection getInstance(){
+	public static synchronized BDConexao getInstance(){
 		if (uniqueInstance == null)
 			try {
-				uniqueInstance = new BDConnection();
+				uniqueInstance = new BDConexao();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

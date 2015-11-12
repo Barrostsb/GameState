@@ -1,39 +1,36 @@
-package controller;
+package DAO;
 
-import java.util.List;
+import Model.Jogo;
 
-import model.Game;
-import servicePlatform.IGameController;
-
-public class GameController implements IGameController{
+public class JogoDAOImpl implements JogoDAO {
 
 	@Override
-	public List<Game> get() {
+	public Jogo create() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Game post(String json) {
+	public Jogo read(Jogo entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Game put(long id, String json) {
+	public Jogo update(Jogo entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Game delete(long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	public Game verifyData(String json) {
+	public Jogo delete(Jogo entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	@Override
+	public Jogo read(long idUser, long idGame, long idPhase) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
