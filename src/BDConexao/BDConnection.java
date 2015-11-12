@@ -1,11 +1,11 @@
-package connection;
+package BDConexao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class BDConnection {
-	 
+	//atributte private and static for Singleton pattern
 	private static BDConnection uniqueInstance;
 	
 	private final String ADAPTER = "mysql";
