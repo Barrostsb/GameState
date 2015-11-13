@@ -3,9 +3,10 @@ package Controller;
 import java.util.List;
 
 import Model.Historico;
-import ServicoJogoPlataforma.IControladorHistorico;
+import ServicoJogo.IControladorHistoricoJ;
+import ServicoPlataforma.IControladorHistoricoP;
 
-class ControladorHistorico implements IControladorHistorico {
+class ControladorHistorico implements IControladorHistoricoJ, IControladorHistoricoP {
 
 	@Override
 	public List<Historico> get() {
