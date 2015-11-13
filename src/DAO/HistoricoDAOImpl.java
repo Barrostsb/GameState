@@ -4,7 +4,7 @@ import java.util.List;
 
 import Model.Historico;
 
-public class HistoricoDAOImpl implements HistoricoDAO {
+class HistoricoDAOImpl implements HistoricoDAO {
 
 	@Override
 	public Historico create() {

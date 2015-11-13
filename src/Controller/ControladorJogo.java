@@ -5,7 +5,7 @@ import java.util.List;
 import Model.Jogo;
 import ServicoPlataforma.IControladorJogo;
 
-public class ControladorJogo implements IControladorJogo{
+class ControladorJogo implements IControladorJogo{
 
 	@Override
 	public List<Jogo> get() {

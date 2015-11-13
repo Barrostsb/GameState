@@ -2,7 +2,7 @@ package DAO;
 
 import Model.Jogo;
 
-public class JogoDAOImpl implements JogoDAO {
+class JogoDAOImpl implements JogoDAO {
 
 	@Override
 	public Jogo create() {

@@ -5,7 +5,7 @@ import java.util.List;
 import Model.Historico;
 import ServicoJogoPlataforma.IControladorHistorico;
 
-public class ControladorHistorico implements IControladorHistorico {
+class ControladorHistorico implements IControladorHistorico {
 
 	@Override
 	public List<Historico> get() {

@@ -2,7 +2,7 @@ package DAO;
 
 import Model.EstadoJogo;
 
-public class EstadoJogoDAOImpl implements GenericDAO<EstadoJogo>{
+class EstadoJogoDAOImpl implements GenericDAO<EstadoJogo>{
 
 	@Override
 	public EstadoJogo create() {

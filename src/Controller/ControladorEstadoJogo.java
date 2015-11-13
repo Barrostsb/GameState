@@ -3,7 +3,7 @@ package Controller;
 import Model.EstadoJogo;
 import ServicoJogo.IControladorEstadoJogo;
 
-public class ControladorEstadoJogo implements IControladorEstadoJogo{
+class ControladorEstadoJogo implements IControladorEstadoJogo{
 
 	@Override
 	public EstadoJogo get(long idUsuario, long idJogo) {

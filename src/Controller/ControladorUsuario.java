@@ -5,7 +5,7 @@ import java.util.List;
 import Model.Usuario;
 import ServicoPlataforma.IControladorUsuario;
 
-public class ControladorUsuario implements IControladorUsuario{
+class ControladorUsuario implements IControladorUsuario{
 
 	@Override
 	public List<Usuario> get() {

@@ -2,7 +2,7 @@ package DAO;
 
 import Model.Usuario;
  
-public class UsuarioDAOImpl implements GenericDAO<Usuario> {
+class UsuarioDAOImpl implements GenericDAO<Usuario> {
 
 	@Override
 	public Usuario create() {
