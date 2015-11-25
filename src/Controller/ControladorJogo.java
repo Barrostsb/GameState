@@ -2,6 +2,8 @@ package Controller;
 
 import java.util.List;
 
+import com.google.gson.Gson;
+
 import Model.Jogo;
 import ServicoPlataforma.IControladorJogo;
 
@@ -15,8 +17,9 @@ class ControladorJogo implements IControladorJogo{
 
 	@Override
 	public Jogo post(String json) {
-		// TODO Auto-generated method stub
-		return null;
+		Jogo jogo = verificarDados(json);
+		//jogo.salvar(jogo.getId(), nome, senha)
+		return jogo;
 	}
 
 	@Override
@@ -32,8 +35,10 @@ class ControladorJogo implements IControladorJogo{
 	}
 	
 	public Jogo verificarDados(String json) {
-		// TODO Auto-generated method stub
-		return null;
+		//instancia um objeto da classe Gson	    	
+		Gson gson = new Gson();
+		Jogo jogo = gson.fromJson(json, Jogo.class);
+		return jogo;
 	}
 
 }
