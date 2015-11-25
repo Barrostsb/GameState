@@ -35,7 +35,7 @@ public class BDConexao {
 	}
 
 	//Open connection with database
-	public void open() throws SQLException {
+	public Connection open() throws SQLException {
 		if (this.connection == null) {
 			String connection = 
 							"jdbc:" + this.ADAPTER + 	
@@ -44,6 +44,7 @@ public class BDConexao {
 							"/" 	+ this.DATABASE;
 			this.connection = DriverManager.getConnection(connection,this.USERNAME,this.PASSWORD);
 		}
+		return connection;
 	}
 
 	//Close connection with database

@@ -37,11 +37,11 @@ public class Jogo {
 		this.id = id;
 	}
 
-	public String getLogin() {
+	public String getNome() {
 		return nome;
 	}
 
-	public void setLogin(String login) {
+	public void setNome(String login) {
 		this.nome = login;
 	}
 }
