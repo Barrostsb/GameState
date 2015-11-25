@@ -1,16 +1,31 @@
 package Model;
 
+import DAO.GenericDAO;
+import DAO.JogoDAOImpl;
+
 public class Jogo {
 	private long id;
-	private String login;
-	private int senha;
+	private String nome;
 	
-	public boolean salvar(long id, String nome, int senha){
-		return true;
+	private GenericDAO<Jogo> dao; 
+	
+	public Jogo(){}
+	public Jogo(long id, String nome){
+		this.id = id;
+		this.nome = nome;
+	}
+	
+	public boolean salvar(long id, String nome){
+		dao = new JogoDAOImpl();
+		Jogo jogo = new Jogo(id, nome);
+		return dao.create(jogo) != null ? true : false; 
 	}
 	
 	public boolean excluir(long id){
-		return true;
+		dao = new JogoDAOImpl();
+		Jogo jogo = new Jogo();
+		jogo = dao.read(id);
+		return dao.delete(jogo) != null ? true : false; 
 	}
 
 	//Getters and Setters
@@ -23,18 +38,10 @@ public class Jogo {
 	}
 
 	public String getLogin() {
-		return login;
+		return nome;
 	}
 
 	public void setLogin(String login) {
-		this.login = login;
-	}
-
-	public int getSenha() {
-		return senha;
-	}
-
-	public void setSenha(int senha) {
-		this.senha = senha;
+		this.nome = login;
 	}
 }

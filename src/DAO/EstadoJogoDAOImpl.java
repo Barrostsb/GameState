@@ -5,13 +5,13 @@ import Model.EstadoJogo;
 class EstadoJogoDAOImpl implements GenericDAO<EstadoJogo>{
 
 	@Override
-	public EstadoJogo create() {
+	public EstadoJogo create(EstadoJogo entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public EstadoJogo read(EstadoJogo entity) {
+	public EstadoJogo read(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

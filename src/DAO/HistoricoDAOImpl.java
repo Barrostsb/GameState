@@ -7,13 +7,13 @@ import Model.Historico;
 class HistoricoDAOImpl implements HistoricoDAO {
 
 	@Override
-	public Historico create() {
+	public Historico create(Historico entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Historico read(Historico entity) {
+	public Historico read(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

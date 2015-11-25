@@ -2,16 +2,16 @@ package DAO;
 
 import Model.Jogo;
 
-class JogoDAOImpl implements JogoDAO {
+public class JogoDAOImpl implements JogoDAO {
 
 	@Override
-	public Jogo create() {
+	public Jogo create(Jogo entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Jogo read(Jogo entity) {
+	public Jogo read(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

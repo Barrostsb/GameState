@@ -5,13 +5,13 @@ import Model.Usuario;
 class UsuarioDAOImpl implements GenericDAO<Usuario> {
 
 	@Override
-	public Usuario create() {
+	public Usuario create(Usuario entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Usuario read(Usuario entity) {
+	public Usuario read(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
