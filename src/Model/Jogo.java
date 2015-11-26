@@ -1,6 +1,5 @@
 package Model;
 
-import DAO.GenericDAO;
 import DAO.JogoDAO;
 import DAO.JogoDAOImpl;
 

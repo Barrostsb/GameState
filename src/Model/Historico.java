@@ -3,8 +3,6 @@ package Model;
 import java.util.Date;
 import java.util.List;
 
-import DAO.EstadoJogoDAOImpl;
-import DAO.GenericDAO;
 import DAO.HistoricoDAO;
 import DAO.HistoricoDAOImpl;
 

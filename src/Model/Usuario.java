@@ -1,7 +1,5 @@
 package Model;
 
-import DAO.GenericDAO;
-import DAO.JogoDAOImpl;
 import DAO.UsuarioDAO;
 import DAO.UsuarioDAOImpl;
 
@@ -13,6 +11,7 @@ public class Usuario {
 	private UsuarioDAO dao;
 	
 	public Usuario(){}
+	
 	public Usuario(long id, String login, String senha){
 		this.id = id;
 		this.login = login;
