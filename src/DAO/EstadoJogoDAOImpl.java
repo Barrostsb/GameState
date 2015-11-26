@@ -1,13 +1,15 @@
 package DAO;
 
 import Model.EstadoJogo;
+import Model.Jogo;
+import Model.Usuario;
 
-class EstadoJogoDAOImpl implements GenericDAO<EstadoJogo>{
+public class EstadoJogoDAOImpl implements EstadoJogoDAO{
 
 	@Override
-	public EstadoJogo create(EstadoJogo entity) {
+	public boolean create(EstadoJogo entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
 	@Override
@@ -17,15 +19,20 @@ class EstadoJogoDAOImpl implements GenericDAO<EstadoJogo>{
 	}
 
 	@Override
-	public EstadoJogo update(EstadoJogo entity) {
+	public boolean update(EstadoJogo entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
 	@Override
-	public EstadoJogo delete(EstadoJogo entity) {
+	public boolean delete(EstadoJogo entity) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public EstadoJogo read(Jogo jogo, Usuario usuario) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 }

@@ -2,12 +2,12 @@ package DAO;
 
 import Model.Usuario;
  
-class UsuarioDAOImpl implements GenericDAO<Usuario> {
+public class UsuarioDAOImpl implements UsuarioDAO {
 
 	@Override
-	public Usuario create(Usuario entity) {
+	public boolean create(Usuario entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
 	@Override
@@ -17,15 +17,15 @@ class UsuarioDAOImpl implements GenericDAO<Usuario> {
 	}
 
 	@Override
-	public Usuario update(Usuario entity) {
+	public boolean update(Usuario entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
 	@Override
-	public Usuario delete(Usuario entity) {
+	public boolean delete(Usuario entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
 }

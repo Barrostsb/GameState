@@ -1,21 +1,38 @@
 package Model;
 
 import java.util.Date;
+import java.util.List;
+
+import DAO.EstadoJogoDAOImpl;
+import DAO.GenericDAO;
+import DAO.HistoricoDAO;
+import DAO.HistoricoDAOImpl;
 
 public class Historico {
 	private Date date;
 	private float tempo;
 	
-	public boolean adicionarHistorico(Historico historico){
-		return true;
+	private HistoricoDAO dao; 
+	
+	public Historico(){}
+	public Historico(Date date, float tempo){
+		this.date = date;
+		this.tempo = tempo;
 	}
 	
-	//Getters and Setters
+	public boolean adicionarHistorico(Historico historico){
+		dao = new HistoricoDAOImpl();
+		Historico hist = new Historico(historico.date, historico.tempo);
+		return dao.create(hist) ? true : false; 
+	}
 	
-	public Historico buscarHistorico(Usuario usuario){
-		return new Historico();
+	public List<Historico> buscarHistorico(Usuario usuario){
+		dao = new HistoricoDAOImpl();
+		return dao.listAllByUser(usuario);
 	}
 
+	
+	//Getters and Setters
 	public Date getDate() {
 		return date;
 	}

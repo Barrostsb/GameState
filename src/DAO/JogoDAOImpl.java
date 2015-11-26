@@ -2,16 +2,18 @@ package DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import Connection.BDConexao;
 import Model.Jogo;
 
 public class JogoDAOImpl implements JogoDAO {
-	
+	Connection connection;
 	@Override
-	public Jogo create(Jogo jogo) {
-		Connection connection;
+	public boolean create(Jogo jogo) {
+		
 		try {
 			connection = BDConexao.getInstance().open();
 
@@ -25,30 +27,66 @@ public class JogoDAOImpl implements JogoDAO {
             preparedStatement.setString(2,  jogo.getNome());
             preparedStatement.executeUpdate();
             preparedStatement.close();
-            return jogo;
+            return true;
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
-			return null;
+			return false;
 		}
 	}
 
 	@Override
 	public Jogo read(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Jogo jogo = new Jogo();
+        try {
+        	Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM jogo WHERE id =" + id);
+            
+            jogo.setId(Integer.parseInt(resultSet.getString("id")));
+            jogo.setNome(resultSet.getString("nome"));
+            resultSet.close();
+            statement.close();
+            return jogo;
+                
+       } catch (SQLException e) {
+           e.printStackTrace();
+           return null;
+       }
+		
 	}
 
 	@Override
-	public Jogo update(Jogo entity) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean update(Jogo jogo) {
+		try {
+			connection = BDConexao.getInstance().open();
+			Statement stmt = connection.createStatement(); 
+			String sql = "UPDATE jogo"
+					+ "SET nome = '" + jogo.getNome() +"'"
+					+ "WHERE id = " + jogo.getId() + "';";
+					 
+			stmt.executeUpdate(sql);
+			stmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 	@Override
-	public Jogo delete(Jogo entity) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean delete(Jogo jogo) {
+		
+		try {
+			connection = BDConexao.getInstance().open();
+			Statement stmt = connection.createStatement(); 
+			String sql = "DELETE FROM jogo WHERE id= " + jogo.getId(); 
+			stmt.executeUpdate(sql);
+			stmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 	@Override

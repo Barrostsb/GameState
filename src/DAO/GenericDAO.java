@@ -1,8 +1,8 @@
 package DAO;
 
 public interface GenericDAO<T> {
-	T create (T entity) ;
+	boolean create (T entity) ;
 	T read(long id);
-	T update(T entity) ;
-	T delete(T entity) ;
+	boolean update(T entity) ;
+	boolean delete(T entity) ;
 }

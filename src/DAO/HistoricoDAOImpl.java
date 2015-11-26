@@ -3,13 +3,14 @@ package DAO;
 import java.util.List;
 
 import Model.Historico;
+import Model.Usuario;
 
-class HistoricoDAOImpl implements HistoricoDAO {
+public class HistoricoDAOImpl implements HistoricoDAO {
 
 	@Override
-	public Historico create(Historico entity) {
+	public boolean create(Historico entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
 	@Override
@@ -19,15 +20,15 @@ class HistoricoDAOImpl implements HistoricoDAO {
 	}
 
 	@Override
-	public Historico update(Historico entity) {
+	public boolean update(Historico entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
 	@Override
-	public Historico delete(Historico entity) {
+	public boolean delete(Historico entity) {
 		// TODO Auto-generated method stub
-		return null;
+		return false;
 	}
 
 	@Override
@@ -37,7 +38,7 @@ class HistoricoDAOImpl implements HistoricoDAO {
 	}
 
 	@Override
-	public List<Historico> listAllByUser() {
+	public List<Historico> listAllByUser(Usuario user) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -1,11 +1,28 @@
 package Model;
 
+import DAO.GenericDAO;
+import DAO.JogoDAOImpl;
+import DAO.UsuarioDAO;
+import DAO.UsuarioDAOImpl;
+
 public class Usuario {
 	private long id;
-	private String nome;
+	private String login;
+	private String senha;
+
+	private UsuarioDAO dao;
 	
-	public boolean salvar(long id, String nome, int senha){
-		return true;
+	public Usuario(){}
+	public Usuario(long id, String login, String senha){
+		this.id = id;
+		this.login = login;
+		this.senha = senha;
+	}
+	
+	public boolean salvar(long id, String login, String senha){
+		dao = new UsuarioDAOImpl();
+		Usuario usuario = new Usuario(id, login, senha);
+		return dao.create(usuario) ? true : false; 
 	}
 	
 	public boolean excluir(long id){
@@ -19,10 +36,17 @@ public class Usuario {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
+	public String getLogin() {
+		return login;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setlogin(String login) {
+		this.login = login;
+	}
+	
+	public String getSenha() {
+		return senha;
+	}
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 }
