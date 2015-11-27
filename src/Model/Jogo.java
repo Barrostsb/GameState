@@ -1,7 +1,9 @@
 package Model;
 
-import DAO.JogoDAO;
-import DAO.JogoDAOImpl;
+import java.util.List;
+
+import Model.DAO.JogoDAO;
+import Model.DAO.JogoDAOImpl;
 
 public class Jogo {
 	private long id;
@@ -10,22 +12,33 @@ public class Jogo {
 	private JogoDAO dao; 
 	
 	public Jogo(){}
-	public Jogo(long id, String nome){
-		this.id = id;
-		this.nome = nome;
+	
+	public Jogo(Jogo jogo){
+		this.id = jogo.getId();
+		this.nome = jogo.getNome();
 	}
 	
-	public boolean salvar(long id, String nome){
-		dao = new JogoDAOImpl();
-		Jogo jogo = new Jogo(id, nome);
-		return dao.create(jogo) ? true : false; 
+	public boolean salvar(Jogo jogo){
+		dao = new JogoDAOImpl();		
+		return dao.create(jogo); 
 	}
 	
 	public boolean excluir(long id){
 		dao = new JogoDAOImpl();
 		Jogo jogo = new Jogo();
 		jogo = dao.read(id);
-		return dao.delete(jogo) ? true : false; 
+		return dao.delete(jogo); 
+	}
+	
+	public boolean alterar(Jogo jogo){
+		dao = new JogoDAOImpl();
+		return dao.update(jogo); 
+	}
+	
+	public List<Jogo> buscarJogos(long id){
+		dao = new JogoDAOImpl();
+		jogo = dao.read(id);
+		return dao.delete(jogo); 
 	}
 
 	//Getters and Setters

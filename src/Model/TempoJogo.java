@@ -3,8 +3,8 @@ package Model;
 import java.util.Date;
 import java.util.List;
 
-import DAO.TempoJogoDAO;
-import DAO.TempoJogoDAOImpl;
+import Model.DAO.TempoJogoDAO;
+import Model.DAO.TempoJogoDAOImpl;
 
 public class TempoJogo {
 	private Date date;

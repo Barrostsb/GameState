@@ -1,7 +1,7 @@
 package Model;
 
-import DAO.EstadoJogoDAO;
-import DAO.EstadoJogoDAOImpl;
+import Model.DAO.EstadoJogoDAO;
+import Model.DAO.EstadoJogoDAOImpl;
 
 public class EstadoJogo {
 	private double pontuacao;
@@ -21,7 +21,7 @@ public class EstadoJogo {
 	public boolean armazenarEstadoJogo(EstadoJogo estadoJogo){
 		dao = new EstadoJogoDAOImpl();
 		EstadoJogo estado = new EstadoJogo(estadoJogo.getPontuacao(), estadoJogo.getLifeBar(), estadoJogo.getFase());
-		return dao.create(estado) ? true : false;
+		return dao.create(estado);
 	}
 	
 	public EstadoJogo buscarEstadoJogo(Jogo jogo, Usuario usuario){

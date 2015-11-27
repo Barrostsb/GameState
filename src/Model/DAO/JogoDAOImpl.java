@@ -1,4 +1,4 @@
-package DAO;
+package Model.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import Connection.BDConexao;
 import Model.Jogo;
 
 public class JogoDAOImpl implements JogoDAO {
@@ -90,7 +89,13 @@ public class JogoDAOImpl implements JogoDAO {
 	}
 
 	@Override
-	public Jogo read(long idUser, long idGame, long idPhase) {
+	public Jogo read(Jogo jogo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Jogo readAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

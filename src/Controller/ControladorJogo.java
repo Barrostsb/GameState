@@ -18,7 +18,7 @@ class ControladorJogo implements IControladorJogo{
 	@Override
 	public Jogo post(String json) {
 		Jogo jogo = verificarDados(json);
-		//jogo.salvar(jogo.getId(), nome, senha)
+		jogo.salvar(jogo);
 		return jogo;
 	}
 

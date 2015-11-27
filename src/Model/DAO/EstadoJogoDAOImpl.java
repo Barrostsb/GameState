@@ -1,4 +1,4 @@
-package DAO;
+package Model.DAO;
 
 import Model.EstadoJogo;
 import Model.Jogo;

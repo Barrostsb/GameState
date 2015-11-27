@@ -1,7 +1,7 @@
 package Model;
 
-import DAO.UsuarioDAO;
-import DAO.UsuarioDAOImpl;
+import Model.DAO.UsuarioDAO;
+import Model.DAO.UsuarioDAOImpl;
 
 public class Usuario {
 	private long id;
