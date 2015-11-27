@@ -2,43 +2,43 @@ package DAO;
 
 import java.util.List;
 
-import Model.Historico;
+import Model.TempoJogo;
 import Model.Usuario;
 
-public class HistoricoDAOImpl implements HistoricoDAO {
+public class TempoJogoDAOImpl implements TempoJogoDAO {
 
 	@Override
-	public boolean create(Historico entity) {
+	public boolean create(TempoJogo entity) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public Historico read(long id) {
+	public TempoJogo read(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean update(Historico entity) {
+	public boolean update(TempoJogo entity) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean delete(Historico entity) {
+	public boolean delete(TempoJogo entity) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public List<Historico> listAll() {
+	public List<TempoJogo> listAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Historico> listAllByUser(Usuario user) {
+	public List<TempoJogo> listAllByUser(Usuario user) {
 		// TODO Auto-generated method stub
 		return null;
 	}

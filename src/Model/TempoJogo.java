@@ -3,29 +3,29 @@ package Model;
 import java.util.Date;
 import java.util.List;
 
-import DAO.HistoricoDAO;
-import DAO.HistoricoDAOImpl;
+import DAO.TempoJogoDAO;
+import DAO.TempoJogoDAOImpl;
 
-public class Historico {
+public class TempoJogo {
 	private Date date;
 	private float tempo;
 	
-	private HistoricoDAO dao; 
+	private TempoJogoDAO dao; 
 	
-	public Historico(){}
-	public Historico(Date date, float tempo){
+	public TempoJogo(){}
+	public TempoJogo(Date date, float tempo){
 		this.date = date;
 		this.tempo = tempo;
 	}
 	
-	public boolean adicionarHistorico(Historico historico){
-		dao = new HistoricoDAOImpl();
-		Historico hist = new Historico(historico.date, historico.tempo);
+	public boolean adicionarHistorico(TempoJogo historico){
+		dao = new TempoJogoDAOImpl();
+		TempoJogo hist = new TempoJogo(historico.date, historico.tempo);
 		return dao.create(hist) ? true : false; 
 	}
 	
-	public List<Historico> buscarHistorico(Usuario usuario){
-		dao = new HistoricoDAOImpl();
+	public List<TempoJogo> buscarHistorico(Usuario usuario){
+		dao = new TempoJogoDAOImpl();
 		return dao.listAllByUser(usuario);
 	}
 
