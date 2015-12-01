@@ -24,8 +24,9 @@ class ControladorJogo implements IControladorJogo{
 
 	@Override
 	public Jogo put(long id, String json) {
-		// TODO Auto-generated method stub
-		return null;
+		Jogo jogo = verificarDados(json);
+		jogo.salvar(jogo);
+		return jogo;
 	}
 
 	@Override

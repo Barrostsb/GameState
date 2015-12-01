@@ -24,9 +24,9 @@ public class EstadoJogo {
 		return dao.create(estado);
 	}
 	
-	public EstadoJogo buscarEstadoJogo(Jogo jogo, Usuario usuario){
+	public EstadoJogo buscarEstadoJogo(long idUsuario, long idJogo){
 		dao = new EstadoJogoDAOImpl();
-		return dao.read(jogo, usuario);
+		return dao.read(idUsuario, idJogo);
 	}
 	
 	//Getter and Setters
