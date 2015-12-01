@@ -1,5 +1,8 @@
 package Model;
 
+import java.util.List;
+
+import Model.DAO.JogoDAOImpl;
 import Model.DAO.UsuarioDAO;
 import Model.DAO.UsuarioDAOImpl;
 
@@ -26,6 +29,12 @@ public class Usuario {
 	
 	public boolean excluir(long id){
 		return true;
+	}
+	
+	public List<Usuario> buscarUsuarios(){
+		dao = new UsuarioDAOImpl();
+		//List<Usuario> = 
+		return null; 
 	}
 	
 	//Getters and Setters

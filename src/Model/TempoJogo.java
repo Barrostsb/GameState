@@ -18,15 +18,20 @@ public class TempoJogo {
 		this.tempo = tempo;
 	}
 	
-	public boolean adicionarHistorico(TempoJogo historico){
+	public boolean adicionarTempoJogo(TempoJogo tempoJogo){
 		dao = new TempoJogoDAOImpl();
-		TempoJogo hist = new TempoJogo(historico.date, historico.tempo);
-		return dao.create(hist) ? true : false; 
+		TempoJogo tempo = new TempoJogo(tempoJogo.date, tempoJogo.tempo);
+		return dao.create(tempo) ? true : false; 
 	}
 	
-	public List<TempoJogo> buscarHistorico(Usuario usuario){
+	public List<TempoJogo> buscarTempoJogo(long idUsuario){
 		dao = new TempoJogoDAOImpl();
-		return dao.listAllByUser(usuario);
+		return dao.listAllByUser(idUsuario);
+	}
+
+	public List<TempoJogo> buscarTempoJogo(){
+		dao = new TempoJogoDAOImpl();
+		return dao.listAll();
 	}
 
 	

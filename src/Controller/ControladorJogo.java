@@ -11,8 +11,9 @@ class ControladorJogo implements IControladorJogo{
 
 	@Override
 	public List<Jogo> get() {
-		// TODO Auto-generated method stub
-		return null;
+		Jogo jogo = new Jogo(); 
+		List<Jogo> lista = jogo.buscarJogos();
+		return lista;
 	}
 
 	@Override
@@ -30,9 +31,9 @@ class ControladorJogo implements IControladorJogo{
 	}
 
 	@Override
-	public Jogo delete(long id) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean delete(long id) {
+		Jogo jogo = new Jogo();
+		return jogo.excluir(id);
 	}
 	
 	public Jogo verificarDados(String json) {

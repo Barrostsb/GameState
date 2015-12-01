@@ -35,10 +35,10 @@ public class Jogo {
 		return dao.update(jogo); 
 	}
 	
-	public List<Jogo> buscarJogos(long id){
+	public List<Jogo> buscarJogos(){
 		dao = new JogoDAOImpl();
-		jogo = dao.read(id);
-		return dao.delete(jogo); 
+		//List<Jogo> = 
+		return null; 
 	}
 
 	//Getters and Setters

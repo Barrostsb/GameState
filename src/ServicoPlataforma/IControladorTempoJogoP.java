@@ -6,5 +6,5 @@ import Model.TempoJogo;
 
 public interface IControladorTempoJogoP {
 	List<TempoJogo> get();
-	List<TempoJogo> get(long idUser);
+	List<TempoJogo> get(long idUsuario);
 }
