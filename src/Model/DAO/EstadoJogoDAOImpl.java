@@ -31,7 +31,7 @@ public class EstadoJogoDAOImpl implements EstadoJogoDAO{
 	}
 
 	@Override
-	public EstadoJogo read(Jogo jogo, Usuario usuario) {
+	public EstadoJogo read(long jogo, long usuario) {
 		// TODO Auto-generated method stub
 		return null;
 	}

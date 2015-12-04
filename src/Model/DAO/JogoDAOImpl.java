@@ -88,11 +88,6 @@ public class JogoDAOImpl implements JogoDAO {
 		return false;
 	}
 
-	@Override
-	public Jogo read(Jogo jogo) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public Jogo readAll() {

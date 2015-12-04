@@ -7,5 +7,5 @@ import Model.Usuario;
 
 public interface TempoJogoDAO extends GenericDAO<TempoJogo>{
 	List<TempoJogo> listAll();
-	List<TempoJogo> listAllByUser(long idUsuario);
+	List<TempoJogo> listAllByUser(long user);
 }

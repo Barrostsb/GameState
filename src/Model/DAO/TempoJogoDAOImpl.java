@@ -38,9 +38,8 @@ public class TempoJogoDAOImpl implements TempoJogoDAO {
 	}
 
 	@Override
-	public List<TempoJogo> listAllByUser(Usuario user) {
+	public List<TempoJogo> listAllByUser(long user) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 }

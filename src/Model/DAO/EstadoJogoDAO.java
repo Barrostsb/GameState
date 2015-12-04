@@ -6,5 +6,5 @@ import Model.Jogo;
 import Model.Usuario;
 
 public interface EstadoJogoDAO extends GenericDAO<EstadoJogo>{
-	EstadoJogo read(Jogo jogo ,Usuario usuario);
+	EstadoJogo read(long jogo ,long usuario);
 }
