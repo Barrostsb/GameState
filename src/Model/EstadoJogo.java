@@ -6,21 +6,25 @@ import Model.DAO.EstadoJogoDAOImpl;
 public class EstadoJogo {
 	private double pontuacao;
 	private double lifeBar;
-	private double fase;
+	private long fase;
+	private long idUsuario;
+	private long idJogo;
 	
 	private EstadoJogoDAO dao; 
 	
 	public EstadoJogo(){}
 	
-	public EstadoJogo(double pontuacao,double lifeBar,double fase){
+	public EstadoJogo(double pontuacao,double lifeBar,long fase, long idUsuario, long idJogo){
 		this.pontuacao = pontuacao;
 		this.lifeBar = lifeBar;
 		this.fase = fase;
+		this.idUsuario = idUsuario;
+		this.idJogo = idJogo;
 	}
 	
 	public boolean armazenarEstadoJogo(EstadoJogo estadoJogo){
 		dao = new EstadoJogoDAOImpl();
-		EstadoJogo estado = new EstadoJogo(estadoJogo.getPontuacao(), estadoJogo.getLifeBar(), estadoJogo.getFase());
+		EstadoJogo estado = new EstadoJogo(estadoJogo.getPontuacao(), estadoJogo.getLifeBar(), estadoJogo.getFase(), estadoJogo.getIdUsuario(), estadoJogo.getIdJogo());
 		return dao.create(estado);
 	}
 	
@@ -46,11 +50,27 @@ public class EstadoJogo {
 		this.lifeBar = lifeBar;
 	}
 
-	public double getFase() {
+	public long getFase() {
 		return fase;
 	}
 
-	public void setFase(double fase) {
+	public void setFase(long fase) {
 		this.fase = fase;
 	}
+	
+	public long getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(long id_usuario) {
+		this.idUsuario = id_usuario;
+	}
+	public long getIdJogo() {
+		return idJogo;
+	}
+
+	public void setIdJogo(long id_jogo) {
+		this.idJogo = id_jogo;
+	}
+	
 }

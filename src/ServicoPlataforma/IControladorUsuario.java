@@ -8,5 +8,5 @@ public interface IControladorUsuario {
 	List<Usuario> get();
 	Usuario post(String json);
 	Usuario put(long id, String json);
-	Usuario delete(long id);
+	boolean delete(long id);
 }

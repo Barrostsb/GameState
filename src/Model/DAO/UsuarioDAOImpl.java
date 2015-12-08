@@ -1,5 +1,7 @@
 package Model.DAO;
 
+import java.util.List;
+
 import Model.Usuario;
  
 public class UsuarioDAOImpl implements UsuarioDAO {
@@ -26,6 +28,12 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 	public boolean delete(Usuario entity) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+	
+	@Override
+	public List<Usuario> listAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 import Model.Jogo;
 
@@ -90,7 +91,7 @@ public class JogoDAOImpl implements JogoDAO {
 
 
 	@Override
-	public Jogo readAll() {
+	public List<Jogo> listAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -1,8 +1,6 @@
 package Model;
 
 import java.util.List;
-
-import Model.DAO.JogoDAOImpl;
 import Model.DAO.UsuarioDAO;
 import Model.DAO.UsuarioDAOImpl;
 
@@ -21,20 +19,27 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
-	public boolean salvar(long id, String login, String senha){
+	public boolean salvar(Usuario usuario){
 		dao = new UsuarioDAOImpl();
-		Usuario usuario = new Usuario(id, login, senha);
-		return dao.create(usuario) ? true : false; 
+		return dao.create(usuario); 
 	}
 	
+	public boolean alterar(Usuario usuario){
+		dao = new UsuarioDAOImpl();
+		return dao.update(usuario); 
+	}
+	
+	
 	public boolean excluir(long id){
-		return true;
+		dao = new UsuarioDAOImpl();
+		Usuario usu = dao.read(id);
+		return dao.delete(usu); 
 	}
 	
 	public List<Usuario> buscarUsuarios(){
 		dao = new UsuarioDAOImpl();
-		//List<Usuario> = 
-		return null; 
+		List<Usuario> list=dao.listAll(); 
+		return list; 
 	}
 	
 	//Getters and Setters

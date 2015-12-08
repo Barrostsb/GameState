@@ -6,7 +6,7 @@ import Model.DAO.JogoDAO;
 import Model.DAO.JogoDAOImpl;
 
 public class Jogo {
-	private long id;
+	private long idJogo;
 	private String nome;
 	
 	private JogoDAO dao; 
@@ -14,7 +14,7 @@ public class Jogo {
 	public Jogo(){}
 	
 	public Jogo(Jogo jogo){
-		this.id = jogo.getId();
+		this.idJogo = jogo.getId();
 		this.nome = jogo.getNome();
 	}
 	
@@ -37,17 +37,17 @@ public class Jogo {
 	
 	public List<Jogo> buscarJogos(){
 		dao = new JogoDAOImpl();
-		//List<Jogo> = 
-		return null; 
+		List<Jogo> list = dao.listAll(); 
+		return list; 
 	}
 
 	//Getters and Setters
 	public long getId() {
-		return id;
+		return idJogo;
 	}
 
 	public void setId(long id) {
-		this.id = id;
+		this.idJogo = id;
 	}
 
 	public String getNome() {

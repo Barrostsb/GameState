@@ -7,21 +7,28 @@ import Model.DAO.TempoJogoDAO;
 import Model.DAO.TempoJogoDAOImpl;
 
 public class TempoJogo {
-	private Date date;
-	private float tempo;
+	private Date data;
+	private String horarioInicial;
+	private String horarioFinal;
+	private long idUsuario;
+	private long idJogo;
+	
 	
 	private TempoJogoDAO dao; 
 	
 	public TempoJogo(){}
-	public TempoJogo(Date date, float tempo){
-		this.date = date;
-		this.tempo = tempo;
+	public TempoJogo(Date data, String horarioInicial, String horarioFinal, long idUsuario, long idJogo){
+		this.data = data;
+		this.horarioInicial = horarioInicial;
+		this.horarioFinal = horarioFinal;
+		this.idUsuario = idUsuario;
+		this.idJogo = idJogo;
 	}
 	
 	public boolean adicionarTempoJogo(TempoJogo tempoJogo){
 		dao = new TempoJogoDAOImpl();
-		TempoJogo tempo = new TempoJogo(tempoJogo.date, tempoJogo.tempo);
-		return dao.create(tempo) ? true : false; 
+		TempoJogo tempo = new TempoJogo(tempoJogo.data, tempoJogo.horarioInicial, tempoJogo.horarioFinal, tempoJogo.idUsuario, tempoJogo.idJogo);
+		return dao.create(tempo); 
 	}
 	
 	public List<TempoJogo> buscarTempoJogo(long idUsuario){
@@ -36,19 +43,43 @@ public class TempoJogo {
 
 	
 	//Getters and Setters
-	public Date getDate() {
-		return date;
+	public Date getData() {
+		return data;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setData(Date data) {
+		this.data = data;
 	}
 
-	public float getTempo() {
-		return tempo;
+	public String getHorarioInicial() {
+		return horarioInicial;
 	}
 
-	public void setTempo(float tempo) {
-		this.tempo = tempo;
+	public void setHorarioInicial(String horarioInicial) {
+		this.horarioInicial = horarioInicial;
+	}
+	
+	public String getHorarioFinal() {
+		return horarioFinal;
+	}
+	
+	public void setHorarioFinal(String horarioFinal) {
+		this.horarioFinal = horarioFinal;
+	}
+	
+	
+	public long getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(long id_usuario) {
+		this.idUsuario = id_usuario;
+	}
+	public long getIdJogo() {
+		return idJogo;
+	}
+
+	public void setIdJogo(long id_jogo) {
+		this.idJogo = id_jogo;
 	}
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.google.gson.Gson;
 
+import Model.EstadoJogo;
 import Model.Jogo;
 import Model.Usuario;
 import ServicoPlataforma.IControladorUsuario;
@@ -19,20 +20,22 @@ class ControladorUsuario implements IControladorUsuario{
 
 	@Override
 	public Usuario post(String json) {
-		// TODO Auto-generated method stub
-		return null;
+		Usuario usu = verificarDados(json);
+		usu.salvar(usu);
+		return usu;
 	}
 
 	@Override
 	public Usuario put(long id, String json) {
-		// TODO Auto-generated method stub
-		return null;
+		Usuario usu = verificarDados(json);
+		usu.salvar(usu);
+		return usu;
 	}
 
 	@Override
-	public Usuario delete(long id) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean delete(long id) {
+		Usuario usu = new Usuario();
+		return usu.excluir(id);
 	}
 	
 	public Usuario verificarDados(String json) {
